@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-stroke-black {
+    -webkit-text-stroke: 5px black;
+  }
+  .clip-path-polygon-full {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body{
+  font-family: "Saans TRIAL";
+  background: #000;
+}
+
+a,p{
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.page-content{
+  padding: 6em 2em;  
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.page-content.hero{
+  background-size: cover;
+  /* background: url('https://assets.science.nasa.gov/dynamicimage/assets/science/astro/exo-explore/internal_resources/1764/true_color_image_of_Earth.jpeg?w=1999&h=1999&fit=clip&crop=faces%2Cfocalpoint') no-repeat center center/cover; */
+}
+
+h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+h1 sup{
+  position: relative;
+  top: -20px;
+  left: 10px;
+  font-size: 1.5vh;
+  letter-spacing: 0;
+}
+
+@media (max-width:900px) {
+  .page-content h1{
+   font-size: 10vw; 
+  }
+
+  h1 sup{
+    font-size: 4vw;
+  }
+}
